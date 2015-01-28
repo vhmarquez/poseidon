@@ -270,6 +270,7 @@ h3 {
 
 .app-dock-support {
   right: 0;
+  bottom: 0;
 }
 @media screen and (min-width: 841px) {
   .app-dock-support {
