@@ -85,8 +85,8 @@ h3 {
   z-index: 3;
   position: fixed;
   display: block;
-  width: 100%;
   top: 0;
+  width: 100%;
   background: #2c3e50;
   border-bottom: 1px solid #34495e;
   -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
@@ -95,15 +95,15 @@ h3 {
 }
 
 .top-table {
-  display: table;
   position: relative;
+  display: table;
 }
 
 .top-table-left,
 .top-table-middle,
 .top-table-right {
-  display: table-cell;
   position: relative;
+  display: table-cell;
   vertical-align: middle;
 }
 
@@ -114,16 +114,18 @@ h3 {
 }
 
 .menu-icon {
-  display: inline-block;
   position: relative;
-  cursor: pointer;
-  font-family: "Roboto";
-  background: #2c3e50;
-  font-size: 16px;
-  color: #fff;
+  display: inline-block;
   width: 74px;
   padding: 20px 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
   text-align: center;
+  font-family: "Roboto";
+  color: #fff;
+  background: #2c3e50;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
@@ -134,33 +136,35 @@ h3 {
 }
 
 .settings-icon {
-  display: inline-block;
   position: relative;
-  cursor: pointer;
-  background: #2c3e50;
-  font-size: 16px;
-  color: #fff;
+  display: inline-block;
+  width: 74px;
   padding: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  color: #fff;
+  background: #2c3e50;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  width: 74px;
-  text-align: center;
 }
 .settings-icon:hover, .settings-icon:focus {
   background: #c0392b;
 }
 
 .app-logo {
-  color: #fff;
+  display: inline-block;
+  padding-left: 12px;
+  padding-right: 12px;
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.2;
   text-align: center;
-  padding-left: 12px;
-  padding-right: 12px;
-  display: inline-block;
+  color: #fff;
 }
 
 .fa-connectdevelop:before {
@@ -180,15 +184,15 @@ h3 {
 .panel-left {
   z-index: 2;
   position: fixed;
+  height: 76px;
+  width: 100%;
+  padding: 4px;
+  bottom: 0;
+  left: 0;
   -moz-transform: translateY(72px);
   -ms-transform: translateY(72px);
   -webkit-transform: translateY(72px);
   transform: translateY(72px);
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 4px;
-  height: 76px;
 }
 .panel-left:before {
   content: "";
@@ -199,13 +203,13 @@ h3 {
 }
 @media screen and (min-width: 841px) {
   .panel-left {
+    width: 92px;
+    min-height: 100%;
+    left: 0;
     -moz-transform: translateX(-92px);
     -ms-transform: translateX(-92px);
     -webkit-transform: translateX(-92px);
     transform: translateX(-92px);
-    left: 0;
-    width: 92px;
-    min-height: 100%;
   }
 }
 
@@ -214,8 +218,8 @@ h3 {
   position: relative;
   width: 100%;
   min-height: 100%;
-  background: #ecf0f1;
   padding: 86px 0 0 24px;
+  background: #ecf0f1;
 }
 
 .app-content,
@@ -223,12 +227,12 @@ h3 {
   display: block;
   position: relative;
   width: 100%;
-  background: #fff;
+  padding: 12px;
+  margin-bottom: 24px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  padding: 12px;
-  margin-bottom: 24px;
+  background: #fff;
   -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -255,24 +259,23 @@ h3 {
 
 .app-dock-main,
 .app-dock-support {
-  display: block;
   position: absolute;
+  display: block;
 }
 
 .app-dock-main {
   width: 100%;
   height: 72px;
-  overflow-x: auto;
-  padding-right: 72px;
   padding: 4px 72px 4px 0;
+  overflow-x: auto;
 }
 @media screen and (min-width: 841px) {
   .app-dock-main {
+    height: 100%;
+    padding: 71px 14px 50px 4px;
+    top: 0;
     overflow-x: visible;
     overflow-y: auto;
-    height: 100%;
-    top: 0;
-    padding: 71px 14px 50px 4px;
   }
 }
 
@@ -282,10 +285,10 @@ h3 {
 }
 @media screen and (min-width: 841px) {
   .app-dock-support {
-    bottom: 0;
-    right: initial;
-    padding-left: 4px;
     padding-bottom: 8px;
+    padding-left: 4px;
+    right: initial;
+    bottom: 0;
   }
 }
 
@@ -341,16 +344,18 @@ h3 {
   position: relative;
   display: block;
   float: left;
-  padding: 20px 0;
   width: 64px;
   height: 64px;
-  text-align: center;
-  font-size: 20px;
-  color: #fff;
-  text-decoration: none;
-  background: #16a085;
+  padding: 20px 0;
   margin-right: 4px;
   border-radius: 3px;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: #16a085;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
@@ -360,9 +365,9 @@ h3 {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 .app-item.support {
+  float: none;
   margin-right: 0;
   margin-bottom: 0;
-  float: none;
 }
 .app-item:hover, .app-item:focus {
   color: #fff;
@@ -373,8 +378,8 @@ h3 {
 }
 @media screen and (min-width: 841px) {
   .app-item {
+    float: none;
     margin-right: 0;
     margin-bottom: 12px;
-    float: none;
   }
 }
