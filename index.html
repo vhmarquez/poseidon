@@ -13,6 +13,10 @@
 		<link rel="stylesheet" href="architecture/css/normalize.min.css">
 		<link rel="stylesheet" href="architecture/css/boilerplate.min.css">
 		<link rel="stylesheet" href="architecture/css/screen.min.css">
+		<link rel="stylesheet" href="architecture/css/waves.min.css">
+
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,900' rel='stylesheet' type='text/css'>
 
 		<!--[if lt IE 9]>
 			<script src="architecture/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
@@ -23,13 +27,57 @@
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 
-		<p>Hello world! This is HTML5 Boilerplate.</p>
+		<div class="application" id="application">
+
+			<!-- TOP PANEL -->
+			<div class="panel-top">
+				<div class="top-table">
+					<div class="top-table-left">
+						<span class="menu-icon"><i class="fa fa-anchor"></i></span>
+					</div>
+					<div class="top-table-middle">
+						<h1 class="app-logo">poseidon</i></h1>
+					</div>
+					<div class="top-table-right">
+						<span class="settings-icon"><i class="fa fa-life-saver"></i></span>
+					</div>
+				</div>
+			</div>
+
+			<!-- LEFT PANEL -->
+			<div class="panel-left">
+				<nav class="app-dock">
+					<div class="app-dock-main">
+						<a href="#" class="app-item"><i class="fa fa-dashboard waves-effect waves-circle"></i></a>
+						<a href="#" class="app-item"><i class="fa fa-inbox waves-effect waves-circle"></i></a>
+						<a href="#" class="app-item"><i class="fa fa-cloud waves-effect waves-circle"></i></a>
+						<a href="#" class="app-item"><i class="fa fa-gamepad waves-effect waves-circle"></i></a>
+					</div>
+					<div class="app-dock-support">
+						<a href="#" class="app-item support"><i class="fa fa-ellipsis-h"></i></a>
+					</div>
+				</nav>
+			</div>
+
+			<!-- RIGHT PANEL -->
+			<div class="panel-right">
+				<div class="grid">
+					<div class="grid-item">
+						<div class="app-content">
+							<h3>CONTENT</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="architecture/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 
-		<script src="architecture/js/plugins.js"></script>
-		<script src="architecture/js/main.js"></script>
+		<script src="architecture/js/plugins.min.js"></script>
+		<script src="architecture/js/main.min.js"></script>
+		<script src="architecture/js/plugins/waves.min.js"></script>
 
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 		<script>
