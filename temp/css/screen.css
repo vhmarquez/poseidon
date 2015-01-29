@@ -3601,6 +3601,7 @@ body {
 
 .user-tag-right {
   width: 100%;
+  padding-left: 12px;
 }
 
 .user-name {
@@ -3622,9 +3623,8 @@ body {
 .user-pic {
   display: block;
   position: relative;
-  width: 24px;
-  height: 24px;
-  padding-right: 12px;
+  width: 36px;
+  height: 36px;
   -moz-border-radius: 50em;
   -webkit-border-radius: 50em;
   border-radius: 50em;
