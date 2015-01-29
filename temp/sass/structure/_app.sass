@@ -177,8 +177,11 @@
 	position: relative
 	width: 100%
 	min-height: 100%
-	padding: 86px 0 0 24px
+	padding: 66px 0 0 0
 	background: #ecf0f1
+
+	+media-query(lap)
+		padding-top: 86px
 
 // application content containers
 ////////////////////////////////////////////////
@@ -192,10 +195,27 @@
 	margin-bottom: 24px
 	+border-radius(3px)
 	background: #fff
-	+box-shadow(0 2px 5px rgba(0,0,0,0.1))
+	+box-shadow(0 0 2px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.24))
 
 	+media-query(lap)
 		padding: 24px
+
+.main-grid
+	@extend %cf
+	width: 100%
+	margin-left: -$half-spacing-unit
+
+	+media-query(lap)
+		margin-left: -$base-spacing-unit
+
+.main-grid-item
+	position: relative
+	width: 100% // default grid items to be own segements in mobile
+	padding-left: $base-spacing-unit
+	float: left
+
+	+media-query(lap)
+		padding-left: $dbl-spacing-unit
 
 // app dock
 ////////////////////////////////////////////////
