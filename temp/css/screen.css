@@ -3569,7 +3569,7 @@ body {
 .navigation-header-switch-right {
   position: relative;
   display: table-cell;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 .navigation-header-switch-left {
@@ -3617,4 +3617,23 @@ body {
   line-height: 2.4;
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.user-pic {
+  display: block;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  padding-right: 12px;
+  -moz-border-radius: 50em;
+  -webkit-border-radius: 50em;
+  border-radius: 50em;
+  overflow: hidden;
+}
+.user-pic > img {
+  position: relative;
+  display: block;
+  width: 110%;
+  height: auto;
+  left: -5%;
 }
