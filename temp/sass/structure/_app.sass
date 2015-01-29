@@ -152,7 +152,6 @@
 	position: fixed
 	min-height: 100%
 	width: 250px
-	padding: 4px
 	bottom: 0
 	left: 0
 	background: #fff
@@ -201,40 +200,52 @@
 // app dock
 ////////////////////////////////////////////////
 
-.app-dock
+.navigation-header
+	padding: 66px 12px 12px 12px
+	background: url(../../assets/img/navigation-header2.jpeg) no-repeat
+	background-size: cover
+
+.navigation-header-switch
 	position: relative
-	display: block
+	display: table
+
+.navigation-header-switch-left,
+.navigation-header-switch-right
+	position: relative
+	display: table-cell
+	vertical-align: top
+
+.navigation-header-switch-left
 	width: 100%
-	height: 72px
 
-	+media-query(lap)
-		height: 100%
-		min-height: 100%
+.navigation-header-switch-right
+	i
+		display: block
+		padding: 12px
+		+font-size(24px)
+		line-height: 1.2
+		color: #fff
+		+text-shadow( 1px 1px 2px rgba(0,0,0, .5))
 
-.app-dock-main,
-.app-dock-support
-	position: absolute
-	display: block
+.user-tag
+	position: relative
+	display: table
 
-.app-dock-main
+.user-tag-left,
+.user-tag-right
+	position: relative
+	display: table-cell
+	vertical-align: middle
+
+.user-tag-right
 	width: 100%
-	height: 72px
-	padding: 4px 72px 4px 0
-	overflow-x: auto
 
-	+media-query(lap)
-		height: 100%
-		padding: 71px 14px 50px 4px
-		top: 0
-		overflow-x: visible
-		overflow-y: auto
+.user-name
+	+font-size(14px)
+	color: #fff
+	+text-shadow( 1px 1px 2px rgba(0,0,0, .5))
 
-.app-dock-support
-	right: 0
-	bottom: 4px
-
-	+media-query(lap)
-		padding-bottom: 8px
-		padding-left: 4px
-		right: initial
-		bottom: 0
+.user-email
+	+font-size(10px)
+	color: #fff
+	+text-shadow( 1px 1px 2px rgba(0,0,0, .5))
