@@ -3605,21 +3605,33 @@ body {
 }
 
 .user-name {
+  position: relative;
+  display: block;
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.71429;
   line-height: 1;
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .user-email {
+  position: relative;
+  display: block;
   font-size: 10px;
   font-size: 0.625rem;
   line-height: 2.4;
   line-height: 1;
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .user-pic {
