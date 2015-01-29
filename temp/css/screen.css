@@ -3622,8 +3622,8 @@ body {
 .user-pic {
   display: block;
   position: relative;
-  width: 48px;
-  height: 48px;
+  width: 24px;
+  height: 24px;
   padding-right: 12px;
   -moz-border-radius: 50em;
   -webkit-border-radius: 50em;
@@ -3636,4 +3636,10 @@ body {
   width: 110%;
   height: auto;
   left: -5%;
+}
+@media screen and (min-width: 841px) {
+  .user-pic {
+    width: 48px;
+    height: 48px;
+  }
 }
