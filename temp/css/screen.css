@@ -3555,7 +3555,7 @@ body {
 }
 
 .navigation-header {
-  padding: 60px 12px 6px;
+  padding: 60px 0 6px 12px;
   background: url(../../assets/img/navigation-header2.jpeg) no-repeat;
   background-size: cover;
 }
