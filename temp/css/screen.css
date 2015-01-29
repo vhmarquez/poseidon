@@ -49,10 +49,18 @@ h6 {
 }
 
 h3 {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #2980b9;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333;
+  color: #34495e;
+}
+
+p {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429;
+  color: #95a5a6;
 }
 
 @font-face {
@@ -3469,6 +3477,16 @@ body {
   -ms-transform: translateX(-250px);
   -webkit-transform: translateX(-250px);
   transform: translateX(-250px);
+}
+@media screen and (min-width: 1024px) {
+  .panel-left {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+    opacity: 0.7;
+  }
+  .panel-left:hover, .panel-left:active, .panel-left:focus {
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+  }
 }
 .panel-left:before {
   content: "";
