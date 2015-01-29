@@ -3166,20 +3166,25 @@ body {
 .menu-icon {
   position: relative;
   display: inline-block;
-  width: 74px;
-  padding: 20px 0;
+  float: left;
   cursor: pointer;
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.5;
+  padding: 12px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2;
   text-align: center;
-  font-family: "Roboto";
   color: #fff;
   background: #2c3e50;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+}
+.menu-icon i {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
 }
 .menu-icon:hover, .menu-icon:focus {
   background: #233140;
@@ -3210,6 +3215,7 @@ body {
   display: inline-block;
   padding-left: 12px;
   padding-right: 12px;
+  margin: 0;
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.2;
@@ -3239,6 +3245,7 @@ body {
   padding: 4px;
   bottom: 0;
   left: 0;
+  background: rgba(0, 0, 0, 0.2);
   -moz-transform: translateY(72px);
   -ms-transform: translateY(72px);
   -webkit-transform: translateY(72px);
@@ -3342,7 +3349,7 @@ body {
   }
 }
 
-@-moz-keyframes expand {
+@-moz-keyframes hover-expand {
   0% {
     -moz-transform: scale(1);
     transform: scale(1);
@@ -3356,7 +3363,7 @@ body {
     transform: scale(1);
   }
 }
-@-webkit-keyframes expand {
+@-webkit-keyframes hover-expand {
   0% {
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -3370,7 +3377,7 @@ body {
     transform: scale(1);
   }
 }
-@keyframes expand {
+@keyframes hover-expand {
   0% {
     -moz-transform: scale(1);
     -ms-transform: scale(1);
@@ -3388,48 +3395,5 @@ body {
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
     transform: scale(1);
-  }
-}
-.app-item {
-  position: relative;
-  display: block;
-  float: left;
-  width: 64px;
-  height: 64px;
-  padding: 20px 0;
-  margin-right: 4px;
-  border-radius: 3px;
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 1.2;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  background: #16a085;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-}
-.app-item.support {
-  float: none;
-  margin-right: 0;
-  margin-bottom: 0;
-}
-.app-item:hover, .app-item:focus {
-  color: #fff;
-  background: #1abc9c;
-  -moz-animation: expand 0.4s ease-in-out;
-  -webkit-animation: expand 0.4s ease-in-out;
-  animation: expand 0.4s ease-in-out;
-}
-@media screen and (min-width: 841px) {
-  .app-item {
-    float: none;
-    margin-right: 0;
-    margin-bottom: 12px;
   }
 }
