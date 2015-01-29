@@ -45,6 +45,6 @@ gulp.task('minify-css', function(){
 
 // Watch Task
 gulp.task('watch', function(){
-	gulp.watch('temp/sass/**/*.sass', ['compass']);
+	gulp.watch('temp/sass/**/*.sass', ['compass'])
 	gulp.watch('temp/js/**/*.js', ['compress']);
 });
