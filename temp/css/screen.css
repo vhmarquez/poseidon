@@ -1,8 +1,10 @@
 @charset "UTF-8";
 .grid:before,
 .grid-full:before,
+.menu-icon-wrap:before,
 .grid:after,
 .grid-full:after,
+.menu-icon-wrap:after,
 .cf:before,
 .cf:after {
   content: " ";
@@ -10,6 +12,7 @@
 }
 .grid:after,
 .grid-full:after,
+.menu-icon-wrap:after,
 .cf:after {
   clear: both;
 }
@@ -26,7 +29,8 @@
   float: left;
 }
 
-.grid-full {
+.grid-full,
+.menu-icon-wrap {
   margin-left: 0 !important;
   width: 100%;
 }
@@ -3090,6 +3094,166 @@ h3 {
   content: "";
 }
 
+@-moz-keyframes hover-expand {
+  0% {
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes hover-expand {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes hover-expand {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-moz-keyframes fadeOut {
+  0% {
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+  75% {
+    opacity: 0;
+  }
+  90% {
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    display: none;
+  }
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  75% {
+    opacity: 0;
+  }
+  90% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    display: none;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  75% {
+    opacity: 0;
+  }
+  90% {
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    display: none;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    display: block;
+    -moz-transform: scale(0);
+    transform: scale(0);
+  }
+  75% {
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    display: block;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    display: block;
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  75% {
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -3108,6 +3272,9 @@ body {
   width: 100%;
   height: 100%;
   background: #fff;
+}
+.application.active-menu .menu-icon-wrap {
+  background: #233140;
 }
 .application.active-menu .panel-left {
   -moz-transform: translateY(0);
@@ -3163,42 +3330,71 @@ body {
   text-align: center;
 }
 
+.menu-icon-wrap {
+  background: #2c3e50;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.menu-icon-wrap:hover, .menu-icon-wrap:focus {
+  background: #233140;
+}
+
 .menu-icon {
   position: relative;
   display: inline-block;
-  float: left;
   cursor: pointer;
-  padding: 12px;
+  padding: 12px 0;
+  height: 54px;
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.2;
   text-align: center;
   color: #fff;
-  background: #2c3e50;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
+.menu-icon.left {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.menu-icon.right {
+  padding-right: 12px;
+  padding-left: 6px;
+  line-height: 1.3;
+}
 .menu-icon i {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1;
+  line-height: 1.2;
 }
-.menu-icon:hover, .menu-icon:focus {
-  background: #233140;
+.menu-icon i.click-fadein {
+  -moz-animation: fadeIn 0.4s ease-in-out;
+  -webkit-animation: fadeIn 0.4s ease-in-out;
+  animation: fadeIn 0.4s ease-in-out;
+  display: block;
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.menu-icon i.click-fadeout {
+  -moz-animation: fadeOut 0.4s ease-in-out;
+  -webkit-animation: fadeOut 0.4s ease-in-out;
+  animation: fadeOut 0.4s ease-in-out;
+  display: none;
 }
 
 .settings-icon {
   position: relative;
   display: inline-block;
-  width: 74px;
-  padding: 20px;
+  padding: 12px;
   cursor: pointer;
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.5;
   text-align: center;
   color: #fff;
   background: #2c3e50;
@@ -3207,8 +3403,14 @@ body {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
+.settings-icon i {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
+  line-height: 1.2;
+}
 .settings-icon:hover, .settings-icon:focus {
-  background: #c0392b;
+  background: #233140;
 }
 
 .app-logo {
@@ -3221,6 +3423,7 @@ body {
   line-height: 1.2;
   text-align: center;
   color: #fff;
+  cursor: pointer;
 }
 
 .fa-connectdevelop:before {
@@ -3240,16 +3443,19 @@ body {
 .panel-left {
   z-index: 2;
   position: fixed;
-  height: 76px;
-  width: 100%;
+  min-height: 100%;
+  width: 250px;
   padding: 4px;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.2);
-  -moz-transform: translateY(72px);
-  -ms-transform: translateY(72px);
-  -webkit-transform: translateY(72px);
-  transform: translateY(72px);
+  background: #fff;
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -moz-transform: translateX(-250px);
+  -ms-transform: translateX(-250px);
+  -webkit-transform: translateX(-250px);
+  transform: translateX(-250px);
 }
 .panel-left:before {
   content: "";
@@ -3257,17 +3463,6 @@ body {
 }
 .panel-left:after {
   clear: both;
-}
-@media screen and (min-width: 841px) {
-  .panel-left {
-    width: 92px;
-    min-height: 100%;
-    left: 0;
-    -moz-transform: translateX(-92px);
-    -ms-transform: translateX(-92px);
-    -webkit-transform: translateX(-92px);
-    transform: translateX(-92px);
-  }
 }
 
 .panel-right {
@@ -3346,54 +3541,5 @@ body {
     padding-left: 4px;
     right: initial;
     bottom: 0;
-  }
-}
-
-@-moz-keyframes hover-expand {
-  0% {
-    -moz-transform: scale(1);
-    transform: scale(1);
-  }
-  50% {
-    -moz-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-  100% {
-    -moz-transform: scale(1);
-    transform: scale(1);
-  }
-}
-@-webkit-keyframes hover-expand {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-@keyframes hover-expand {
-  0% {
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  50% {
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-  100% {
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -webkit-transform: scale(1);
-    transform: scale(1);
   }
 }
