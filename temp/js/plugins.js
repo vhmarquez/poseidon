@@ -28,8 +28,8 @@ $('.overlay, .panel-left').on('swipeleft',function (e){
 	$('.menu-icon').children('i').toggleClass('click-fadeout');
 });
 
-$('.panel-right').on('swiperight',function (e){
+$('#panelRight').on('swiperight',function(e,data){
 	$('#application').addClass('active-menu');
 	$('.menu-icon').children('i').toggleClass('click-fadein');
 	$('.menu-icon').children('i').toggleClass('click-fadeout');
-}
+});
