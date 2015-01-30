@@ -3302,8 +3302,7 @@ p {
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 2;
-  color: #fff;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  color: #757575;
   font-weight: 700;
   width: 130px;
   white-space: nowrap;
@@ -3318,12 +3317,12 @@ p {
   font-size: 0.625rem;
   line-height: 2.4;
   line-height: 1;
-  color: #fff;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  color: #757575;
   width: 130px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-bottom: 5px;
 }
 
 .user-pic {
@@ -3657,7 +3656,7 @@ body {
 }
 
 .navigation-header {
-  padding: 96px 0 6px 12px;
+  padding: 90px 0 0 0;
   overflow: hidden;
 }
 
@@ -3683,10 +3682,80 @@ body {
   transition: all 0.4s ease-in-out;
 }
 
+.profile-switch {
+  z-index: 2;
+  position: relative;
+  display: block;
+  height: 61px;
+  padding-top: 64px;
+  overflow: hidden;
+  -moz-transition: height 0.4s ease-in-out;
+  -o-transition: height 0.4s ease-in-out;
+  -webkit-transition: height 0.4s ease-in-out;
+  transition: height 0.4s ease-in-out;
+}
+.profile-switch.active {
+  height: auto;
+}
+
 .navigation-header-switch {
+  z-index: 0;
   position: relative;
   display: table;
-  z-index: 2;
+  width: 100%;
+  padding: 6px 0 6px 12px;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  -moz-box-shadow: inset -4px 0 0 #757575;
+  -webkit-box-shadow: inset -4px 0 0 #757575;
+  box-shadow: inset -4px 0 0 #757575;
+  -moz-transition: color 0.4s ease-in-out;
+  -o-transition: color 0.4s ease-in-out;
+  -webkit-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+  cursor: pointer;
+}
+.navigation-header-switch.active {
+  position: absolute;
+  display: table;
+  top: 0;
+  left: 0;
+  padding-top: 0;
+  background: transparent;
+  border-bottom: 0;
+  -moz-box-shadow: inset 0 0 0;
+  -webkit-box-shadow: inset 0 0 0;
+  box-shadow: inset 0 0 0;
+}
+.navigation-header-switch.active .navigation-header-switch-right {
+  display: table-cell;
+}
+.navigation-header-switch.active .user-name,
+.navigation-header-switch.active .user-email {
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.navigation-header-switch:hover, .navigation-header-switch:active, .navigation-header-switch:focus {
+  -moz-box-shadow: inset -4px 0 0 #2980b9;
+  -webkit-box-shadow: inset -4px 0 0 #2980b9;
+  box-shadow: inset -4px 0 0 #2980b9;
+}
+.navigation-header-switch:hover .user-name,
+.navigation-header-switch:hover .user-email, .navigation-header-switch:active .user-name,
+.navigation-header-switch:active .user-email, .navigation-header-switch:focus .user-name,
+.navigation-header-switch:focus .user-email {
+  color: #2980b9;
+}
+.navigation-header-switch:hover.active, .navigation-header-switch:active.active, .navigation-header-switch:focus.active {
+  -moz-box-shadow: inset 0 0 0;
+  -webkit-box-shadow: inset 0 0 0;
+  box-shadow: inset 0 0 0;
+}
+.navigation-header-switch:hover.active .user-name,
+.navigation-header-switch:hover.active .user-email, .navigation-header-switch:active.active .user-name,
+.navigation-header-switch:active.active .user-email, .navigation-header-switch:focus.active .user-name,
+.navigation-header-switch:focus.active .user-email {
+  color: #fff;
 }
 
 .navigation-header-switch-left,
@@ -3700,6 +3769,9 @@ body {
   width: 100%;
 }
 
+.navigation-header-switch-right {
+  display: none;
+}
 .navigation-header-switch-right i {
   display: block;
   padding: 12px;
@@ -3709,6 +3781,7 @@ body {
   line-height: 1.2;
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .navigation {
