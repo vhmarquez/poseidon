@@ -3802,7 +3802,7 @@ body {
 }
 .navigation-list-box.footer {
   position: fixed;
-  bottom: 54px;
+  top: calc(100% - 164px);
   left: 0;
   border-bottom: 0;
   border-top: 1px solid #e5e5e5;
