@@ -3353,6 +3353,7 @@ body {
   height: 100%;
   min-height: 100%;
   font-family: "Open Sans", sans-serif;
+  -webkit-overflow-scrolling: touch;
 }
 
 .application {
@@ -3782,7 +3783,8 @@ body {
   width: 100%;
   background: #fff;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   white-space: nowrap;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
