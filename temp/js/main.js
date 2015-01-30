@@ -24,7 +24,7 @@ $(document).ready(function() {
 			console.log(switchHeight);
 
 			if(switchHeight < 59){
-				$('#profileSwitch').css('height', (profileHeight*i)+12);
+				$('#profileSwitch').css('height', (profileHeight*i)+6);
 			} else if(switchHeight > 58) {
 				$('#profileSwitch').css('height', '58px');
 			}
