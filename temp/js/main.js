@@ -1,7 +1,9 @@
 $(document).ready(function() {
-	$('.menu-icon').on('click', function(){
+
+	$('.menu-icon, .overlay').on('click', function(){
 		$('#application').toggleClass('active-menu');
-		$(this).children('i').toggleClass('click-fadein');
-		$(this).children('i').toggleClass('click-fadeout');
+		$('.menu-icon').children('i').toggleClass('click-fadein');
+		$('.menu-icon').children('i').toggleClass('click-fadeout');
 	});
+
 });

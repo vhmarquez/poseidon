@@ -11,6 +11,17 @@
 
 	&.active-menu
 
+		.overlay
+			z-index: 2
+			position: fixed
+			display: block
+			top: 0
+			left: 0
+			width: 100%
+			min-height: 100%
+			background: rgba(0,0,0, .3)
+			cursor: pointer
+
 		.menu-icon-wrap
 			background: darken(#2c3e50, 5%)
 
@@ -19,6 +30,11 @@
 
 			+media-query(lap)
 				+transform(translateX(0))
+
+	+media-query(desk)
+		&.active-menu
+			.overlay
+				display: none
 
 	// clearfix
 	&:before
@@ -32,7 +48,7 @@
 ////////////////////////////////////////////////
 
 .panel-top
-	z-index: 3
+	z-index: 4
 	position: fixed
 	display: block
 	top: 0
@@ -151,10 +167,10 @@
 .panel-left,
 .panel-right
 	display: block
-	+transition(all .4s ease-in-out)
+	+transition(all .3s ease-in-out)
 
 .panel-left
-	z-index: 2
+	z-index: 3
 	position: fixed
 	min-height: calc(100% + 54px)
 	width: 250px
@@ -166,6 +182,9 @@
 
 	+hover
 		.navigation
+			+opacity(1)
+
+		.navigation-header-cover img
 			+opacity(1)
 
 	// clearfix
@@ -245,6 +264,8 @@
 		display: block
 		left: -50%
 		top: -50%
+		+opacity(.86)
+		+transition(all .4s ease-in-out)
 
 .navigation-header-switch
 	position: relative
@@ -281,7 +302,7 @@
 	+transition(all .4s ease-in-out)
 
 	+media-query(desk)
-		+opacity(.8)
+		+opacity(.86)
 
 .navigation-list-box
 	position: relative

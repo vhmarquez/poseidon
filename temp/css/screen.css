@@ -3369,6 +3369,17 @@ body {
   height: 100%;
   background: #fff;
 }
+.application.active-menu .overlay {
+  z-index: 2;
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
 .application.active-menu .menu-icon-wrap {
   background: #233140;
 }
@@ -3386,6 +3397,11 @@ body {
     transform: translateX(0);
   }
 }
+@media screen and (min-width: 1024px) {
+  .application.active-menu .overlay {
+    display: none;
+  }
+}
 .application:before {
   content: "";
   display: table;
@@ -3395,7 +3411,7 @@ body {
 }
 
 .panel-top {
-  z-index: 3;
+  z-index: 4;
   position: fixed;
   display: block;
   top: 0;
@@ -3540,14 +3556,14 @@ body {
 .panel-left,
 .panel-right {
   display: block;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .panel-left {
-  z-index: 2;
+  z-index: 3;
   position: fixed;
   min-height: calc(100% + 54px);
   width: 250px;
@@ -3563,6 +3579,10 @@ body {
   transform: translateX(-250px);
 }
 .panel-left:hover .navigation, .panel-left:active .navigation, .panel-left:focus .navigation {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+.panel-left:hover .navigation-header-cover img, .panel-left:active .navigation-header-cover img, .panel-left:focus .navigation-header-cover img {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
@@ -3655,6 +3675,12 @@ body {
   display: block;
   left: -50%;
   top: -50%;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=86);
+  opacity: 0.86;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .navigation-header-switch {
@@ -3701,8 +3727,8 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .navigation {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-    opacity: 0.8;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=86);
+    opacity: 0.86;
   }
 }
 
