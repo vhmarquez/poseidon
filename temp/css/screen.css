@@ -3718,6 +3718,9 @@ body {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
+.navigation-list-box-item > a i {
+  margin-right: 24px;
+}
 .navigation-list-box-item > a:hover, .navigation-list-box-item > a:active, .navigation-list-box-item > a:focus {
   background: rgba(0, 0, 0, 0.03);
 }
