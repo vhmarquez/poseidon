@@ -9,12 +9,12 @@ $(document).ready(function() {
 	$('.navigation-header-switch').on('click', function(){
 
 		var 	switchHeight = $('#profileSwitch').height();
-			switchHeight = switchHeight + 61;
+			switchHeight = switchHeight + 58;
 
 			console.log(switchHeight);
 
 		if($(this).hasClass('active')){
-			var 	profileHeight = 61;
+			var 	profileHeight = 52;
 				i = 0;
 
 			$(this).parent('#profileSwitch').children('.navigation-header-switch').each(function() {
@@ -23,17 +23,17 @@ $(document).ready(function() {
 
 			console.log(switchHeight);
 
-			if(switchHeight < 62){
-				$('#profileSwitch').height((profileHeight*i) - 61);
-			} else if(switchHeight > 61) {
-				$('#profileSwitch').css('height', '61px');
+			if(switchHeight < 59){
+				$('#profileSwitch').css('height', (profileHeight*i)+12);
+			} else if(switchHeight > 58) {
+				$('#profileSwitch').css('height', '58px');
 			}
 
 		} else {
 
 			$(this).siblings('.navigation-header-switch').removeClass('active');
 			$(this).addClass('active');
-			$('#profileSwitch').css('height', '61px');
+			$('#profileSwitch').css('height', '58px');
 
 		}
 

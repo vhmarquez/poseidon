@@ -3686,7 +3686,7 @@ body {
   z-index: 2;
   position: relative;
   display: block;
-  height: 61px;
+  height: 58px;
   padding-top: 64px;
   overflow: hidden;
   -moz-transition: height 0.4s ease-in-out;
@@ -3699,7 +3699,6 @@ body {
 }
 
 .navigation-header-switch {
-  z-index: 0;
   position: relative;
   display: table;
   width: 100%;
