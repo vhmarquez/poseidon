@@ -22,6 +22,6 @@
 }());
 
 // Place any jQuery/helper plugins in here.
-$('.overlay').on('swipeleft',function (e){
+$('.overlay, .panel-left').on('swipeleft',function (e){
     $('#application').removeClass('active-menu');
 });
