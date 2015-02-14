@@ -13,17 +13,14 @@ $(document).ready(function() {
 		var 	switchHeight = $('#profileSwitch').height();
 			switchHeight = switchHeight + 58;
 
-			console.log(switchHeight);
-
 		if($(this).hasClass('active')){
+
 			var 	profileHeight = 52;
 				i = 0;
 
 			$(this).parent('#profileSwitch').children('.navigation-header-switch').each(function() {
 				i++;
 			});
-
-			console.log(switchHeight);
 
 			if(switchHeight < 59){
 				$('#profileSwitch').height((profileHeight*i)-52);
